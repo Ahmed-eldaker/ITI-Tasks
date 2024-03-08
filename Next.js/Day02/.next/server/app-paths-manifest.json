@@ -1,0 +1,7 @@
+{
+  "/not-found": "app/not-found.js",
+  "/shop/page": "app/shop/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/shop/[id]/page": "app/shop/[id]/page.js",
+  "/page": "app/page.js"
+}
