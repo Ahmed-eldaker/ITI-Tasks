@@ -1,0 +1,134 @@
+*{
+    padding: 0;
+    margin: 0;
+    color: aliceblue;
+}
+.Hl{
+    font-size: 50px;
+}
+.navL{
+    float: left;
+}
+.navR{
+    float: right;
+}
+li{
+    display: inline-block;
+    padding-left: 60px; ;
+    color: aliceblue;
+}
+li button{
+    background-color: #d82a4e;
+    padding: 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.section1{
+    height: 900px;
+background-image: url(bg.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+}
+h1{
+    font-size: 60px;
+
+}
+.home{
+    padding-left: 80px;
+    padding-right: 80px;
+}
+.nav{
+   
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.section1 .container{
+    padding-top: 220px;
+text-align: center;
+}
+.section1 .container p{
+    padding-top: 30px;
+    padding-right: 190px;
+    padding-left: 190px;
+}
+.section1 form{
+    padding-left: 300px;
+    padding-right: 100px;
+    padding-top: 200px;
+}
+  input{
+    padding:10px 30px 10px 10px  ;
+    margin-right: 30px;
+}
+ button {
+    padding:10px 20px  ;
+    background-color: #d82a4e;
+}
+.section2{
+    margin: 100px 70px;
+}
+.section2 .container{
+    background-color: #d82a4e;
+    padding: 50px;
+    text-align: center;
+}
+.section2 .container p{
+    font-size: 60px;
+}
+.section2 form{
+    background-color: aliceblue;
+padding: 50px 20px;
+margin: 10px 30px;
+
+}
+.section3{
+    margin: 100px 0px;
+ text-align: center;   
+}
+
+h2{
+    font-size: 50px;
+    color: rgb(117, 116, 116);
+}
+figure{
+    width: 22%;
+    background-color: rgb(152, 184, 184);
+    position: relative;
+    margin-right: 10px;
+    margin-left: 10px;
+    display: inline-block;
+}
+figure :hover{
+    background-color: #d82a4e;
+    
+}
+figure img{
+    width: 100%;
+    height: 100%;
+}
+.price{
+     position: absolute; top: 10px; left: 10px; padding: 8px; background-color: #d82a4e; 
+    }
+h3{
+    color: black;
+}
+li :hover{
+    cursor: pointer;
+    background-color:brown;
+    
+    
+}
+
+figcaption{
+    padding: 20px 0px;
+}
+figcaption p{
+    color: rgb(255, 252, 252);
+}
+h4{
+    color: #d82a4e;
+    padding: 10px 0px;
+}

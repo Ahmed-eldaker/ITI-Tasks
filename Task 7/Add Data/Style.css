@@ -1,0 +1,66 @@
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+
+}
+form{
+   
+   padding-bottom : 5px; 
+   display: flex;   
+   flex-direction: column;
+   
+
+}
+input{
+    padding: 5px 5px;
+    border-radius: 10px;
+    margin-top: 2px;
+    
+}
+button{
+ border-radius: 5px;
+ padding: 5px 10px 5px 10px;
+ margin-top: 10px;
+ background-color: aquamarine;
+
+}
+.Reset{
+    background-color: chocolate;
+}table {
+    width: 50%;
+  }
+  .t1{
+    width: 30%;
+  }
+  .t2{
+    width: 20%;
+  }
+  .t3{
+    width: 50%;
+  }
+
+  th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 4px;
+
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  .content {
+    visibility: visible;  
+    padding: 6px;
+    color: red;
+  }
+  
+  .contentHidden {
+    visibility: hidden;
+  }
+  
