@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .myDiv {
+        margin: 0 auto;
+        width: 400px;
+        height: 400px;
+        background-image: url(images/thankful-businessman-with-open-arms-field_254268-363.jpg), url(images/bird.avif), url(images/sun.avif);
+        background-blend-mode: multiply;
+        background-repeat: no-repeat;
+        filter: none;
+        background-size: cover;
+        border: 1px solid red;
+        background-position: center;
+        border-radius: 40% 25% 40% 25%;
+
+    }
+</style>
+
+<body>
+    <div class="myDiv"></div>
+    <button>Grayscale</button>
+    <button>Sepia</button>
+    <button>invert</button>
+    <button>opacity</button>
+    <button>saturate</button>
+    <script>
+        let myDiv = document.querySelector('.myDiv');
+        let GrayscaleBtn = document.getElementsByTagName("button")[0];
+        let sepiaBtn = document.getElementsByTagName("button")[1];
+        let invertBtn = document.getElementsByTagName("button")[2];
+        let opacityBtn = document.getElementsByTagName("button")[3];
+        let saturateBtn = document.getElementsByTagName("button")[4];
+        GrayscaleBtn.addEventListener('click', function () {
+            myDiv.style.filter = 'grayscale(1)';
+        });
+        sepiaBtn.addEventListener('click', function () {
+            myDiv.style.filter = 'sepia(1)';
+        });
+        invertBtn.addEventListener('click', function () {
+            myDiv.style.filter = 'invert(1)';
+        });
+        opacityBtn.addEventListener('click', function () {
+            myDiv.style.filter = 'opacity(0.5)';
+        });
+        saturateBtn.addEventListener('click', function () {
+            myDiv.style.filter = 'saturate(3)';
+        });
+    </script>
+</body>
+
+</html>

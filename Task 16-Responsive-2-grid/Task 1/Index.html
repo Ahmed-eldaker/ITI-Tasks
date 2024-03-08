@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .container {
+            margin: 0 auto;
+            width: 70%;
+            height: 100vh;
+            display: grid;
+            gap: 0.5rem;
+            grid-template-rows: 1fr 10fr 2fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-areas:
+                'navBar navBar navBar navBar'
+                'sideBar content1 content2 content3'
+                'footer footer footer footer'
+                'footer footer footer footer'
+            ;
+        }
+
+        .navBar {
+            background-color: slategray;
+            grid-area: navBar;
+        }
+
+        .sideBar {
+            background-color: silver;
+            grid-area: sideBar;
+        }
+
+        .content1 {
+            background-color: aquamarine;
+            grid-area: content1;
+        }
+
+        .content2 {
+            background-color: steelblue;
+            grid-area: content2;
+        }
+
+        .content3 {
+            background-color: cadetblue;
+            grid-area: content3;
+        }
+
+        .footer {
+            background-color: darkcyan;
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navBar">NAVBAR</div>
+        <div class="sideBar">SIDEBAR</div>
+        <div class="content1">CONTENT1</div>
+        <div class="content2">CONTENT2</div>
+        <div class="content3">CONTENT3</div>
+        <div class="footer">FOOTER</div>
+    </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="createForm" class="createForm">
+            <input id="numOfBooks" class="numOfBooks" type="number" placeholder="numOfBooks">
+            <button id="createBtn" class="createBtn">Create Form</button>
+        </div>
+        <div id="workArea" class="hidden">
+            <div class="form">
+
+                <input id="bookName" class="lookLike" type="text" placeholder="Enter Book Name">
+                <span id="errorName" class="hidden errorArea">Enter Valid Book Name</span>
+                <input id="Price" class="lookLike" type="text" placeholder="Enter Book Price">
+                <span id="errorPrice" class="hidden errorArea">Enter Valid Book Price</span>
+                <input id="authorName" class="lookLike" type="text" placeholder="Enter Author Name">
+                <span id="errorAutName" class="hidden errorArea">Enter Valid Author Name</span>
+                <input id="authorEmail" class="lookLike" type="text" placeholder="Enter Author Email">
+                <span id="errorEmail" class="hidden errorArea">Enter Valid Email</span>
+                <button id="addBtn" class="addBtn">Add</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="t1">Book Name</th>
+                        <th class="t2">Price</th>
+                        <th class="t3">Author Name</th>
+                        <th class="t4">Email</th>
+                        <th class="t5">Update</th>
+                        <th class="t6">Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="body">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+    <script src="Script.js"></script>
+</body>
+
+</html>

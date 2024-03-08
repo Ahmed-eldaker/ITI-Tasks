@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .container {
+            height: 100vh;
+            display: grid;
+            gap: 0.5rem;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 5fr 4fr 2fr;
+            grid-template-areas:
+                'navBar navBar navBar navBar'
+                'sideBar main main main'
+                'sideBar content1 content2 content3'
+                'sideBar footer footer footer';
+        }
+
+        .container2 {
+            display: none;
+        }
+
+        @media (max-width: 668px) {
+            .container {
+                display: none;
+
+            }
+
+            .container2 {
+                display: grid;
+                height: 100vh;
+                grid-template-rows: 1fr 1fr 5fr 2fr 2fr 2fr 1fr;
+                gap: 0.25rem;
+                grid-template-areas:
+                    'navBar'
+                    'sideBar'
+                    'main'
+                    'content1'
+                    'content2'
+                    'content3'
+                    'footer';
+                ;
+            }
+        }
+
+        .navBar {
+            background-color: slategray;
+            grid-area: navBar;
+        }
+
+        .main {
+            background-color: steelblue;
+            grid-area: main;
+        }
+
+        .sideBar {
+            background-color: silver;
+            grid-area: sideBar;
+        }
+
+        .content1 {
+            background-color: aquamarine;
+            grid-area: content1;
+        }
+
+        .content2 {
+            background-color: steelblue;
+            grid-area: content2;
+        }
+
+        .content3 {
+            background-color: cadetblue;
+            grid-area: content3;
+        }
+
+        .footer {
+            background-color: darkcyan;
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navBar">navBar</div>
+        <div class="main">main</div>
+        <div class="sideBar">sideBar</div>
+        <div class="content1">content1</div>
+        <div class="content2">content2</div>
+        <div class="content3">content3</div>
+        <div class="footer">footer</div>
+
+    </div>
+    <div class="container2">
+        <div class="navBar">navBar</div>
+        <div class="main">main</div>
+        <div class="sideBar">sideBar</div>
+        <div class="content1">content1</div>
+        <div class="content2">content2</div>
+        <div class="content3">content3</div>
+        <div class="footer">footer</div>
+
+    </div>
+
+</body>
+
+</html>

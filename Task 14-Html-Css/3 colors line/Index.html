@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <input type="range" id="red" min="1" max="255">
+        <input type="range" id="green" min="1" max="255">
+        <input type="range" id="blue" min="1" max="255">
+        <p>Change the 3 color ranges above and observe my color change</p>
+    </div>
+
+
+    <script>
+        let red = document.getElementById('red');
+        let green = document.getElementById("green");
+        let blue = document.getElementById("blue");
+        let p = document.getElementsByTagName('p')[0];
+        red.addEventListener('input', function () {
+            p.style.color = `rgb(${red.value}, ${green.value}, ${blue.value})`;
+        });
+        green.addEventListener('input', function () {
+            p.style.color = `rgb(${red.value}, ${green.value}, ${blue.value})`;
+        });
+        blue.addEventListener('input', function () {
+            p.style.color = `rgb(${red.value}, ${green.value}, ${blue.value})`;
+        });
+
+    </script>
+</body>
+
+</html>

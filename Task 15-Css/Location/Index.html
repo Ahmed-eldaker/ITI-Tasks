@@ -1,0 +1,122 @@
+<html>
+
+<head>
+    <title>Simple Map</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <style>
+        /* 
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map. 
+ */
+        #map {
+            height: 70%;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        /* 
+ * Optional: Makes the sample page fill the window. 
+ */
+        table {
+            margin: 0 auto;
+            border: 1px solid seagreen;
+            width: 400px;
+            height: 100px;
+            visibility: hidden;
+        }
+
+
+        th,
+        tr,
+        td {
+
+            background-color: cadetblue;
+
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button>myMap</button>
+    <Button>Location Info</Button>
+    <div id="locationMab">
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Latitude</th>
+                    <th scope="col">Longitude</th>
+                    <th scope="col">Time</th>
+
+                </tr>
+            <tbody>
+
+            </tbody>
+            </thead>
+        </table>
+    </div>
+    <div id="map"></div>
+
+    <!-- prettier-ignore -->
+    <script>(g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })
+            ({ key: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg", v: "weekly" });</script>
+
+    <script>
+        let map;
+        let table = document.getElementsByTagName('table')[0];
+        let tbody = document.getElementsByTagName('tbody')[0];
+        var latitude;
+        var longitude;
+        var btnMap = document.getElementsByTagName('button')[0];
+        var time = new Date()
+        var btnLocation = document.getElementsByTagName('button')[1];
+        btnMap.addEventListener('click', function () {
+            navigator.geolocation.getCurrentPosition(sucess, error);
+        })
+        /////////////////////////////////////////////////////////////////////
+        function sucess(obj) {
+            var lat = obj.coords.latitude;
+            var log = obj.coords.longitude
+
+            initMap(log, lat);
+        }
+        ///////////////////////////////////////////////////////////////////////
+        function error(e) {
+            console.log('error');
+        }
+        ////////////////////////////////////////////////////////////////////////
+        async function initMap(y, x) {
+            const { Map } = await google.maps.importLibrary("maps");
+            latitude = x;
+            longitude = y;
+
+            map = new Map(document.getElementById("map"), {
+                center: { lat: x, lng: y },
+                zoom: 20,
+            });
+        }
+        btnLocation.addEventListener("click", function () {
+            if (!latitude) {
+                alert('please choose your location first')
+            }
+            else {
+                table.style.visibility = "visible"
+                tbody.innerHTML = `<tr><td>${latitude}</td><td>${longitude}</td><td>${time}</td></tr>`
+            }
+
+
+        })
+
+        // console.log(lat, log);
+    </script>
+</body>
+
+</html>

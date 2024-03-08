@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form oninput="res.value=parseInt(R.value)">
+        <input type="number">
+        <input min="0" max="20" type="range" name="R">
+        <output id="O" name="res"></output>
+    </form>
+
+
+
+
+    <script>
+        let R = document.getElementsByTagName('input')[1];
+        let N = document.getElementsByTagName('input')[0];
+        let O = document.getElementById('O');
+        // R.addEventListener("change", function () {
+        //     N.value = R.value;
+        // });
+        N.addEventListener("change", function () {
+            O.value = N.value;
+        });
+    </script>
+</body>
+
+</html>

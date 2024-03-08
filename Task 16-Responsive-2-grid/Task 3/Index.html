@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 60%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-rows: repeat(5, 1fr);
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            height: 100vh;
+            grid-template-areas:
+                'cell1 cell1 cell1 cell2'
+                'cell1 cell1 cell1 cell3'
+                'cell4 cell4 cell4 cell4'
+                'cell5 cell6 cell6 cell6'
+                'cell5 cell7 cell8 cell9'
+            ;
+        }
+
+        .cell1 {
+            background-image: url(images/image-1.jpeg);
+            background-size: cover;
+            background-position: center;
+            grid-area: cell1;
+        }
+
+        .cell2 {
+            background-image: url(images/image-2.jpeg);
+            background-size: cover;
+            grid-area: cell2;
+            background-position: center;
+        }
+
+        .cell3 {
+            background-image: url(images/image-3.jpeg);
+            background-size: cover;
+            background-position: center;
+            grid-area: cell3;
+        }
+
+        .cell4 {
+            background-image: url(images/image-4.jpeg);
+            grid-area: cell4;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .cell5 {
+            background-image: url(images/size-image-1.jpeg);
+            grid-area: cell5;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .cell6 {
+            background-image: url(images/size-image-1.jpeg);
+            grid-area: cell6;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .cell7 {
+            background-image: url(images/size-image-3.jpeg);
+            grid-area: cell7;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .cell8 {
+            background-image: url(images/size-image-4.jpeg);
+            grid-area: cell8;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .cell9 {
+            background-image: url(images/image-2.jpeg);
+            grid-area: cell9;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container2 {
+            display: none;
+        }
+
+        @media (max-width:668px) {
+            .container {
+                display: none;
+            }
+
+            .container2 {
+                display: grid;
+                width: 70%;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 3fr 2fr 2fr 4fr 2fr 4fr 3fr 2fr 2fr;
+                gap: 10px;
+                height: 400vh;
+                grid-template-areas:
+                    'cell1'
+                    'cell2'
+                    'cell3'
+                    'cell4'
+                    'cell5'
+                    'cell6'
+                    'cell7'
+                    'cell8'
+                    'cell9';
+
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="cell1"></div>
+        <div class="cell2"></div>
+        <div class="cell3"></div>
+        <div class="cell4"></div>
+        <div class="cell5"></div>
+        <div class="cell6"></div>
+        <div class="cell7"></div>
+        <div class="cell8"></div>
+        <div class="cell9"></div>
+    </div>
+    <div class="container2">
+        <div class="cell1"></div>
+        <div class="cell2"></div>
+        <div class="cell3"></div>
+        <div class="cell4"></div>
+        <div class="cell5"></div>
+        <div class="cell6"></div>
+        <div class="cell7"></div>
+        <div class="cell8"></div>
+        <div class="cell9"></div>
+    </div>
+
+
+
+</body>
+
+</html>

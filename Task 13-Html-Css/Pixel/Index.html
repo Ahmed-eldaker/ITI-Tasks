@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        tr {
+            box-shadow: 0px 0px 2px black inset;
+        }
+
+        td {
+            box-shadow: 0px 0px 2px black inset;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Pixel Art Maker</h1>
+        <p>Choose Grid Size</p>
+        <div>
+            <label for="heightInput">Grid Height</label>
+            <input type="number" name="height" id="heightInput">
+            <label for="widthInput">Grid Width</label>
+            <input type="number" name="width" id="widthInput">
+
+        </div>
+        <p>Pic a color</p>
+        <input type="color" id="color">
+        <p>Design Canvas</p>
+        <table id="pixelCanvas">
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    <script>
+        let table = document.getElementById('pixelCanvas');
+        let heightInput = document.getElementById('heightInput');
+        let widthInput = document.getElementById('widthInput');
+        let color = document.getElementById('color');
+        widthInput.addEventListener("change", function () {
+            table.innerHTML = '';
+            for (let i = 0; i < heightInput.value; i++) {
+                let row = document.createElement('tr');
+                table.appendChild(row);
+
+                for (let x = 0; x < widthInput.value; x++) {
+                    let cell = document.createElement('td');
+                    cell.addEventListener("click", function () {
+                        cell.style.backgroundColor = color.value;
+                    })
+                    row.appendChild(cell);
+                };
+            }
+        });
+        heightInput.addEventListener("change", function () {
+            table.innerHTML = '';
+            for (let i = 0; i < heightInput.value; i++) {
+                let row = document.createElement('tr');
+                table.appendChild(row);
+
+                for (let x = 0; x < widthInput.value; x++) {
+                    let cell = document.createElement('td');
+                    cell.addEventListener("click", function () {
+                        cell.style.backgroundColor = color.value;
+                    })
+                    row.appendChild(cell);
+                };
+            }
+        });
+
+
+
+    </script>
+</body>
+
+</html>

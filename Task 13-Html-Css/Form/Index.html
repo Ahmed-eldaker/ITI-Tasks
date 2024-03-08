@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        form {
+
+            width: 400px;
+            height: 250px;
+            box-shadow: 0px 0px 2px black inset;
+            margin-top: 50px;
+            margin-left: 37%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        input {
+            margin: 5px 0px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form method="post">
+        <h1>Change Email Address</h1>
+        <input type="text" placeholder="Username" name="myName" autofocus autocomplete="off" required
+            pattern="[A-Za-z]{3,7}" title="Please enter your name between 3 and 7 char">
+        <input type="Email" placeholder="Email" name="myPassword" autofocus autocomplete="off" required
+            pattern="[a-z0-9]+@[a-z0-9]+\.[a-z]{2,}">
+        <button>submit</button>
+    </form>
+
+
+</body>
+
+</html>

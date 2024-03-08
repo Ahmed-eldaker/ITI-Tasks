@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <label for="colorInput">Choose Circle Color:</label>
+    <input type="color" id="colorInput">
+
+    <button onclick="generateCircles()">Click me</button>
+
+    <canvas style="display: block;" id="circleCanvas"></canvas>
+
+    <script>
+        function generateCircles() {
+            var colorInput = document.getElementById('colorInput');
+            var canvas = document.getElementById('circleCanvas');
+            var ctx = canvas.getContext('2d');
+            canvas.width = "700";
+            canvas.height = "500";
+
+            var numCircles = Math.random() * 50;
+            for (var i = 0; i < numCircles; i++) {
+                var x = Math.random() * canvas.width;
+                var y = Math.random() * canvas.height;
+                var radius = Math.random() * 30 + 10;
+                ctx.beginPath();
+                ctx.arc(x, y, radius, 0, 2 * Math.PI);
+                ctx.strokeStyle = colorInput.value;
+                ctx.lineWidth = 3;
+                ctx.stroke();
+                ctx.closePath();
+            }
+        }
+    </script>
+
+</body>
+
+</html>

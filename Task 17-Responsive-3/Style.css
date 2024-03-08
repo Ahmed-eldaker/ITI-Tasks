@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 2rem;
+}
+.logo{
+    font-size: 2rem;
+}
+a:hover{
+color:teal;
+cursor: pointer;
+}
+.icons{
+    display: flex;
+justify-content: center;
+align-items: center;
+gap: 1rem;
+}
+i{
+    font-size: 1.25rem;
+}
+i:hover{
+    color: teal;
+    cursor: pointer;
+}
+.navbar{
+    background-color: rgb(221, 231, 245);
+    padding:1rem 1.5rem ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.container{
+    background: linear-gradient(0.50turn ,teal,transparent 75%),url(image-3.jpeg) ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 88.5vh ;
+}
+.content{
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+p{
+    letter-spacing: 0.1rem;
+    padding: 10px 0;
+}
+button{
+    padding: 10px 20px;
+    outline: none;
+
+}
+button:hover{
+    color: white;
+    background-color: transparent;
+   
+}
+.menu{
+    position: absolute;
+    right: 20%;
+    visibility: hidden;
+}
+@media (max-width:668px) {
+    .menu{
+        visibility: visible;
+    }
+    .icons{
+        display: none;
+    }
+    .ancors{
+        display: none;
+    }
+}

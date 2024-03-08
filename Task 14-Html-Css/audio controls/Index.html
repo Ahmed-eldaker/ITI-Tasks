@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        img {
+            width: 250px;
+            height: 250px;
+        }
+
+        p {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <img src="imgs/1.jpg" />
+        <audio loop autoplay controls>
+            <source src="audios/1.mp3" type="audio/mpeg" />
+            your browser don`t support audio
+        </audio>
+        <div>
+            <button id="play">play</button>
+            <button id="pause">pause</button>
+            <button id="stop">stop</button>
+            <button id="mute">mute</button>
+        </div>
+
+        <input type="range" min="0" max="1" step=".1" value="1" id="rangeVolume" />
+        <input type="range" min="0" max="" value="1" id="rangeTime" />
+        <div>
+            <p>Audio 1</p>
+        </div>
+        <div>
+            <p>Audio 2</p>
+        </div>
+        <div>
+            <p>Audio 3</p>
+        </div>
+        <div>
+            <p>Audio 4</p>
+        </div>
+    </div>
+
+    <script>
+        var a = document.getElementsByTagName('audio')[0];
+        var playBtn = document.getElementById('play');
+        var pauseBtn = document.getElementById('pause');
+        var stopBtn = document.getElementById('stop');
+        var muteBtn = document.getElementById('mute');
+        var rangeVolume = document.getElementById('rangeVolume');
+        var rangeTime = document.getElementById('rangeTime');
+        var img = document.getElementsByTagName('img')[0];
+        var source = document.getElementsByTagName('source')[0];
+        var audio1 = document.getElementsByTagName('p')[0];
+        var audio2 = document.getElementsByTagName('p')[1];
+        var audio3 = document.getElementsByTagName('p')[2];
+        var audio4 = document.getElementsByTagName('p')[3];
+        audio1.addEventListener('click', function () {
+            window.location.href = "Index.html";
+            playAudio();
+
+        })
+        audio2.addEventListener('click', function () {
+            window.location.href = "index2.html";
+        })
+
+        audio3.addEventListener('click', function () {
+            window.location.href = "Index3.html";
+            playAudio();
+        })
+        audio4.addEventListener('click', function () {
+            window.location.href = "Index4.html";
+            playAudio();
+        })
+
+        function playAudio() {
+            a.addEventListener('durationchange', function () {
+                rangeTime.max = a.duration;
+            })
+            rangeTime.addEventListener('input', function () {
+                a.currentTime = rangeTime.value;
+            })
+
+            playBtn.addEventListener('click', function () {
+                a.play();
+            })
+
+            pauseBtn.addEventListener('click', function () {
+                a.pause();
+            })
+
+            stopBtn.addEventListener('click', function () {
+                a.load();
+                a.pause();
+            })
+
+            muteBtn.addEventListener('click', function () {
+                a.muted = !a.muted;
+            })
+
+            rangeVolume.addEventListener('input', function () {
+                a.volume = rangeVolume.value;
+            })
+        }
+
+
+    </script>
+</body>
+
+</html>
