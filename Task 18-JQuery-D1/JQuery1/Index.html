@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <style>
+        * {
+
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            margin-right: 2px;
+            width: 80px;
+            height: 40px;
+            background-color: #d0dcdf;
+            cursor: pointer;
+        }
+
+        .tab1 {
+            background-color: #97a1a3;
+        }
+
+        p {
+            display: none;
+        }
+
+        .content1 {
+
+            display: block;
+        }
+
+        p {
+            width: 326px;
+            height: 60px;
+            background-color: #97a1a3;
+            /* text-align: center; */
+        }
+
+        .Tabs {
+            display: flex;
+            justify-content: left;
+            margin-top: 50px;
+        }
+
+        /* .contents {
+             color: white; 
+        }*/
+    </style>
+</head>
+
+<body>
+    <div class="Tabs">
+        <h2 class="tab tab1" id="1" data-tab-index="1">Tab 1</h2>
+        <h2 class="tab" id="2" data-tab-index="2">Tab 2</h2>
+        <h2 class="tab" id="3" data-tab-index="3">Tab 3</h2>
+        <h2 class="tab" id="4" data-tab-index="4">Tab 4</h2>
+    </div>
+    <div class="contents">
+        <p class="Content content1" data-content-index="1">Content 1</p>
+        <p class="Content" data-content-index="2">Content 2</p>
+        <p class="Content" data-content-index="3">Content 3</p>
+        <p class="Content" data-content-index="4">Content 4</p>
+    </div>
+
+    <script src="Script.js"></script>
+</body>
+
+</html>

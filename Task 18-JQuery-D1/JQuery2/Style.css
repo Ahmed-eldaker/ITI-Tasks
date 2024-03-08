@@ -1,0 +1,80 @@
+* {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(27, 27, 34);
+}
+
+input {
+    padding: 7px 10px;
+    width: 300px;
+    margin-right: 10px;
+    box-shadow: 1px 1px 4px 4px rgb(53, 53, 70);
+    border-radius: 7px;
+
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid green;
+}
+
+button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: yellow;
+    outline: none;
+    border: 0px solid white;
+}
+
+button:hover {
+    border: 1px solid white;
+}
+input:not(:focus){
+    border: 1px solid red;
+}
+
+/* .buttons {
+    margin: 50px 0px;
+} */
+
+.toDo {
+    padding: 5px;
+    margin: 20px 0;
+    position: relative;
+    height: 30px;
+    width: 100%;
+    background-color: darkslategray;
+    box-shadow: 1px 1px 4px 4px rgb(53, 53, 70);
+}
+.true{
+    color: transparent;
+    border: 2px solid slategrey;
+cursor: pointer;
+}
+.true:hover{
+    border: 2px solid yellow;
+}
+.trash {
+    position: absolute;
+    right: 10px;
+    top: 10%;
+    cursor: pointer;
+    color: yellow;
+    visibility: hidden;
+}
+
+.tasks {
+    width: 35%;
+   
+}

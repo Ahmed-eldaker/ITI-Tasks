@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+.main {
+    overflow: hidden;
+}
+
+.container {
+    /* margin-top: 10px; */
+    padding-top: 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* overflow: hidden; */
+}
+
+.hoverDiv {
+    filter: grayscale(1);
+    z-index: 99;
+
+
+}
+
+.hoverDiv:hover {
+    transform: scale(1.2);
+    filter: grayscale(0);
+    transition: all 2s ease-in-out;
+    -webkit-filter: grayscale(0);
+}
+
+.hoverDiv:not(:hover) {
+    transform: scale(1);
+    transition: all 2s ease-in-out;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+
+
+.imgDiv {
+    margin: 5px;
+    width: 200px;
+    margin: 0 25px;
+    height: 350px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.img1 {
+    background-image: url(imgs/1.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.img2 {
+    background-image: url(imgs/2.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.img3 {
+    background-image: url(imgs/3.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.img4 {
+    background-image: url(imgs/4.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.img5 {
+    background-image: url(imgs/4.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    background-color: rgba(70, 150, 120, 0.6);
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+i {
+    /* background-color: tomato; */
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 2rem;
+    color: black;
+}
+i:hover{
+    color: tomato;
+    transform: scale(1.2);
+    transition: all 2s ease-in-out;
+    -webkit-transition: all 2s ease-in-out;
+    -moz-transition: all 2s ease-in-out;
+    -ms-transition: all 2s ease-in-out;
+    -o-transition: all 2s ease-in-out;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
