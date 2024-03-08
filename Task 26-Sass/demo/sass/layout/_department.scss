@@ -1,0 +1,24 @@
+.department{
+   padding: 10px;
+    .card{
+        width: 30%;
+
+    }
+    
+    &__title{
+        margin-bottom: 38px;
+    }
+    &__row{
+        display: flex;
+        justify-content: space-evenly ;
+        margin-bottom: 20px;
+    }
+    &__btn{
+        display: flex;
+        justify-content: center;
+        .btn{
+            position: relative;
+        top: 30px;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+
+
+
+.card{
+    &--icon{
+        display: flex;
+        &__img{
+            margin-right:20px ;
+        
+
+        }
+        &__text{
+            h2{
+                color:$secondry-color;
+                margin-bottom: 12px;
+
+
+            }
+            p{
+                color:$dark-font;
+                width: 70%;
+            }
+            
+        }
+
+    }
+
+}
+

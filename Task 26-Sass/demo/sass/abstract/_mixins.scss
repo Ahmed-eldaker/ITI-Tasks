@@ -1,0 +1,5 @@
+@mixin eleHover($x:$black-color,$y:$white-color){
+    background-color: $x;
+    color:$y;
+
+}

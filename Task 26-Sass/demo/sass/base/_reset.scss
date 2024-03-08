@@ -1,0 +1,43 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+// body{
+//     margin: 20px;
+// }
+.container{
+    width: 85%;
+    margin: 0 auto;
+}
+.gapx-1{
+    margin-inline:5px ;
+}
+.gapx-2{
+    margin-inline:10px ;
+}
+.gapx-3{
+    margin-inline:15px ;
+}
+.gapx-4{
+    margin-inline:20px ;
+}
+.gapx-5{
+    margin-inline:25px ;
+}
+.gapy-1{
+    margin-block:5px ;
+}
+.gapy-2{
+    margin-block:10px ;
+}
+.gapy-3{
+    margin-block:15px ;
+}
+.gapy-4{
+    margin-block:20px ;
+}
+.gapy-5{
+    margin-block:25px ;
+}

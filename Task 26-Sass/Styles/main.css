@@ -1,0 +1,56 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin: 0 auto;
+}
+.container .card {
+  overflow: hidden;
+  border: 1px solid #ddd;
+  margin: 5px;
+  padding: 5px;
+  width: 24%;
+}
+.container .card--icon {
+  overflow: hidden;
+}
+.container .card--icon img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+.container .card--icon img:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+.container .card--text {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+.container .card--text span {
+  font-size: 14px;
+  color: #333;
+}
+.container .card--text h2 {
+  font-size: 18px;
+  margin-top: 5px;
+  color: #444;
+}
+.container .card--text__icon i {
+  font-size: 16px;
+  color: #007bff;
+  border: 1 solid #007bff;
+}
+.container .card--text:hover {
+  background-color: white;
+}

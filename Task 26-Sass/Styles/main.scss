@@ -1,0 +1,65 @@
+// Import partials
+@import 'variables';
+@import "titles";
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+width: 85%;
+margin: 0 auto;  
+    .card {
+      overflow: hidden;
+      border: 1px solid $card-border;
+      margin: 5px;
+      padding: 5px;
+      width: 24%;
+
+  
+      &--icon {
+          overflow: hidden;
+        img {
+          max-width: 100%;
+          height: auto;
+          transition: transform 0.3s ease-in-out;
+          &:hover {
+            transform: scale(1.1);
+}
+        }
+      }
+  
+      &--text {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 5px;
+  
+        span {
+          font-size: 14px;
+          color: $card-text-color;
+        }
+  
+        h2 {
+          font-size: 18px;
+          margin-top: 5px;
+          color: $card-heading-color;
+        }
+  
+        &__icon {
+          i {
+            font-size: 16px;
+            color: $primary-color;
+            border: 1 solid $primary-color ;
+          }
+        }
+  
+        
+        &:hover {
+          background-color: lighten($card-background, 5%);
+        }
+      }
+    }
+  }

@@ -1,0 +1,90 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.card--icon {
+  display: flex;
+}
+.card--icon__img {
+  margin-right: 20px;
+}
+.card--icon__text h2 {
+  color: #008fe2;
+  margin-bottom: 12px;
+}
+.card--icon__text p {
+  color: #777;
+  width: 70%;
+}
+
+.department {
+  padding: 10px;
+}
+.department .card {
+  width: 30%;
+}
+.department__title {
+  margin-bottom: 38px;
+}
+.department__row {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+.department__btn {
+  display: flex;
+  justify-content: center;
+}
+.department__btn .btn {
+  position: relative;
+  top: 30px;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 800;
+  text-transform: capitalize;
+  background-color: transparent;
+}
+.btn a {
+  text-decoration: none;
+}
+.btn--rounded a {
+  color: #1d2127;
+  border: 2px solid #1d2127;
+  border-radius: 21px;
+  padding: 7px 24px;
+}
+.btn--rounded a:hover {
+  background-color: #1d2127;
+  color: #ffffff;
+}
+.btn--rectangle a {
+  padding: 11px;
+  color: #008fe2;
+}
+.btn--rectangle a:hover {
+  background-color: #2d529f;
+  color: #ffffff;
+}
+
+.titles__header {
+  color: #1d2127;
+  font-size: 26px;
+  margin-bottom: 13px;
+}
+.titles span {
+  color: #777;
+}
+
+.section-bgcolor {
+  background-color: #f4f4f4;
+  height: 500px;
+}/*# sourceMappingURL=main.css.map */

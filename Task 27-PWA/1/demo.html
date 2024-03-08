@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="CSS/main.css" rel="stylesheet">
+    <link href="manifest_and_icons/manifest.json" rel="manifest">
+</head>
+
+<body>
+    <h1>Welcome Home Page </h1>
+    <div class="container">
+        <a href="page2.html">page2</a>
+        <a href="page3.html">page3</a>
+    </div>
+    <button id="install" hidden>Install</button>
+    <!-- <button id="installButton">Install </button> -->
+    <script src="JS/main.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                // var myWorker = new Worker()
+                navigator.serviceWorker.register('sw.js')
+                    .then((reg) => {
+                        console.log('service worker registered successfully')
+                    })
+                    .catch(err => {
+                        console.log(err)
+                    })
+            })
+        }
+    </script>
+</body>
+
+</html>

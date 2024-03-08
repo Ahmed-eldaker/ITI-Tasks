@@ -1,0 +1,46 @@
+.resorces{
+    width: 100%;
+    height: 500px;
+    padding: 20px ;
+    background-color: $section-gray;
+    .doctors-row{
+        display: flex;
+        justify-content: space-between;
+        .doctor-card{
+            overflow: hidden;
+            transition: .5s;
+            width: 32%;
+              &__img{
+                  width: 100%;
+                  
+                  img{
+                      width: 100%;           
+                  }
+              }
+              &__text{
+                
+                  width: 100%;
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: end;
+                  padding: 20px 5px;
+                 
+                  &__left{
+                      width: 70%;
+                  }
+                  &__right{
+                      width: 20%;
+                      i{
+                        font-size: 25px;
+                      }
+                  }
+                 
+                  
+              }
+              &:hover{
+                background-color:$white-color;
+                transition: .5s;
+              }
+        }
+    }   
+}
