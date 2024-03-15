@@ -8,12 +8,14 @@ import ProductCard from "./Components/Productcard";
 import FeaturedProducts from "./Components/FeaturedProducts";
 import FeaturedCategories from "./Components/FeaturedProduct";
 import Footer from "./Components/Footer";
+import TestimonialSection from "./Components/TestimonialSection";
 
 function App() {
   return (
     <>
       {/* <Task /> */}
       <Navbar />
+      <TestimonialSection />
       <FeaturedProducts />
       <FeaturedCategories />
       <Footer />
